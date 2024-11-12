@@ -1,0 +1,276 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 20px;
+    padding: 30px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+    color: rgb(16, 137, 211);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+img {
+    cursor: zoom-in;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 15px;
+    box-shadow: #cff0ff 0px 8px 8px -5px;
+    border-inline: 2px solid transparent;
+    font-size: 14px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-inline: 2px solid #12B1D1;
+}
+
+button[type="submit"], input[type=file] {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 18px 10px -12px;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+}
+
+.filter-switch {
+    padding-top: 2px;
+    border: 2px solid #186dbc;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.filter-switch input {
+    display: none;
+}
+
+.filter-switch label {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s;
+    font-weight: 500;
+    font-size: 18px;
+    color: #8c8c8c;
+}
+
+.filter-switch .background {
+    position: absolute;
+    width: 32%; /* Adjusted for 3 options */
+    height: 38px;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    top: 4px;
+    left: 4px;
+    border-radius: 30px;
+    transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Position the background for each state */
+.filter-switch input[value="pending"]:checked ~ .background {
+    left: 1%;
+}
+
+.filter-switch input[value="proses"]:checked ~ .background {
+    left: 34%;
+}
+
+.filter-switch input[value="selesai"]:checked ~ .background {
+    left: 67%;
+}
+
+/* Style for checked labels */
+.filter-switch input:checked + label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-switch {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .filter-switch label {
+        font-size: 16px;
+    }
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.error p {
+    margin: 0;
+}
+
+p {
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.register {
+    color: #0064a6;
+    text-decoration: none;
+}
+
+.logout {
+    color: #cb0d0d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pengaduan-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.pengaduan-list th, .pengaduan-list td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.pengaduan-list th {
+    background-color: #f4f4f4;
+}
+
+.pengaduan-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.status-pending {
+    background-color: #ffd700;
+}
+
+.status-proses {
+    background-color: #87ceeb;
+}
+
+.status-selesai {
+    background-color: #90ee90;
+}
+
+.foto-preview {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.action-buttons a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.view-btn {
+    background-color: #4CAF50;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
