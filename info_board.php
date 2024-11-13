@@ -207,7 +207,7 @@ if (!$result) {
                     <img src="uploads/<?php echo htmlspecialchars($row['foto']); ?>" alt="Bukti Pengaduan" class="card-image">
                     <div class="card-content">
                         <h2 class="card-title"><?php echo htmlspecialchars($row['judul']); ?></h2>
-                        <p class="card-details"><?php echo nl2br(htmlspecialchars(substr($row['isi'], 0, 150)) . '...'); ?></p>
+                        <p class="card-details"><?php echo nl2br(htmlspecialchars(substr($row['isi'], 0, 150)) . ''); ?></p>
                     </div>
                     <div class="card-footer">
                         <span class="status-badge <?php echo $status_class; ?>">

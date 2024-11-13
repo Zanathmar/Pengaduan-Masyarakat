@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
             </div>
             <button type="submit" name="register">Register</button>
         </form>
-        <p>Sudah punya akun? <a href="login.php">Login disini</a></p>
+        <p>Sudah punya akun? <a href="login.php" class="register">Login disini</a></p>
     </div>
 </body>
 </html>
